@@ -1,0 +1,95 @@
+/* Full dashboard container */
+.dashboard {
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Keeps heading and icons stacked vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    min-height: 100vh; /* Makes the dashboard span the full height of the viewport */
+    text-align: center; /* Centers the heading text */
+    padding: 20px; /* Adds some spacing around the content */
+}
+
+/* Icons container layout */
+.icons {
+    display: grid; /* Use CSS Grid for precise control */
+    grid-template-columns: repeat(2, 1fr); /* Two icons per row */
+    gap: 20px; /* Space between icons */
+    justify-content: center; /* Centers the grid horizontally */
+    margin-top: 20px; /* Space above the icons container */
+}
+
+/* Styling for individual icons */
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    background-color: #ececec;
+    border-color: #ccc;
+    transform: translateY(-5px);
+}
+
+/* Image inside the icon */
+.icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Icon labels */
+.icon span {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .icons {
+        grid-template-columns: 1fr; /* Change to one column on smaller screens */
+        gap: 15px;
+    }
+
+    .icon {
+        width: 120px;
+    }
+
+    .icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon span {
+        font-size: 14px;
+    }
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 20px; /* Space above the footer */
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    width: 100%; /* Make sure it spans the entire width */
+    position: absolute;
+    bottom: 10px; /* Push it close to the bottom */
+}
+
+/* Ensure proper spacing for full-page layout */
+.dashboard {
+    position: relative; /* Allows positioning of the footer inside the container */
+    padding-bottom: 50px; /* Prevent footer from overlapping content */
+}
